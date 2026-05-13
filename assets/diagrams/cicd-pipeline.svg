@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" font-family="Segoe UI, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="900" height="200" fill="#f9fafb" rx="10"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#111827">CI/CD Pipeline — GitHub Actions</text>
+  <line x1="60" y1="40" x2="840" y2="40" stroke="#e5e7eb" stroke-width="1"/>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <!-- Step 1: git push -->
+  <rect x="30" y="70" width="120" height="60" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="90" y="96" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">git push</text>
+  <text x="90" y="114" text-anchor="middle" font-size="10" fill="#6b7280">Developer</text>
+
+  <!-- Arrow -->
+  <line x1="152" y1="100" x2="175" y2="100" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 2: GitHub Actions -->
+  <rect x="178" y="70" width="130" height="60" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="243" y="96" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">GitHub Actions</text>
+  <text x="243" y="114" text-anchor="middle" font-size="10" fill="#3b82f6">Trigger on push / PR</text>
+
+  <!-- Arrow -->
+  <line x1="310" y1="100" x2="333" y2="100" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 3: Set up JDK -->
+  <rect x="336" y="70" width="130" height="60" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="401" y="96" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">Setup JDK 17</text>
+  <text x="401" y="114" text-anchor="middle" font-size="10" fill="#6b7280">Temurin · Maven cache</text>
+
+  <!-- Arrow -->
+  <line x1="468" y1="100" x2="491" y2="100" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 4: mvn test -->
+  <rect x="494" y="70" width="130" height="60" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="559" y="96" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">mvn test</text>
+  <text x="559" y="114" text-anchor="middle" font-size="10" fill="#6b7280">32 JUnit 5 tests</text>
+
+  <!-- Arrow splits -->
+  <line x1="626" y1="100" x2="649" y2="100" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 5a: Pass -->
+  <rect x="652" y="58" width="115" height="52" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="709" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">✓ PASS</text>
+  <text x="709" y="100" text-anchor="middle" font-size="10" fill="#15803d">Pipeline green · merge OK</text>
+
+  <!-- Step 5b: Fail -->
+  <rect x="652" y="120" width="115" height="52" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="709" y="142" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">✗ FAIL</text>
+  <text x="709" y="162" text-anchor="middle" font-size="10" fill="#b91c1c">Build blocked · fix required</text>
+
+  <!-- Divider line between pass/fail -->
+  <line x1="626" y1="84" x2="650" y2="84" stroke="#6b7280" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="626" y1="146" x2="650" y2="146" stroke="#6b7280" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="626" y1="84" x2="626" y2="146" stroke="#6b7280" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Upload artifact -->
+  <rect x="790" y="70" width="95" height="60" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="837" y="93" text-anchor="middle" font-size="10" font-weight="bold" fill="#7c3aed">Surefire</text>
+  <text x="837" y="108" text-anchor="middle" font-size="10" font-weight="bold" fill="#7c3aed">Reports</text>
+  <text x="837" y="123" text-anchor="middle" font-size="9" fill="#9333ea">Uploaded always</text>
+  <line x1="769" y1="84" x2="788" y2="84" stroke="#6b7280" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arr)"/>
+
+  <!-- Footer -->
+  <text x="450" y="190" text-anchor="middle" font-size="10" fill="#9ca3af">Agile Foundations · Amalitech Apprenticeship · BankVault</text>
+
+</svg>
