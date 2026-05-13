@@ -1,4 +1,4 @@
-# 🟢 Sprint 1 — Review
+# Sprint 1 — Review
 
 ![Status](https://img.shields.io/badge/Status-Complete-22c55e?style=flat-square)
 ![Stories](https://img.shields.io/badge/Stories_Delivered-4%2F4-22c55e?style=flat-square)
@@ -12,14 +12,14 @@
 
 ---
 
-## 🎯 Sprint Goal Result
+## Sprint Goal Result
 
 > [!NOTE]
 > All four planned stories were delivered and met the Definition of Done. The application runs end-to-end from customer registration through account transactions. Data was in-memory only at this stage — persistence was scoped to Sprint 2.
 
 ---
 
-## 📦 Delivered Stories
+## Delivered Stories
 
 | Story | Description | Status | Tests Added |
 |:---:|---|:---:|---|
@@ -28,9 +28,8 @@
 | `US-03` | Deposit — balance update and ledger entry | ✅ Done | `AccountTest` |
 | `US-04` | Withdrawal — overdraft guard and minimum balance enforcement | ✅ Done | `AccountTest`, `ExceptionTest` |
 
----
 
-## 🔑 Key Commits
+## Key Commits
 
 | Date | Commit | What it delivered |
 |---|---|---|
@@ -40,9 +39,8 @@
 | Mar 17 | `Refactored AccountManager and Transaction Manager` | Separated account management and transaction ledger responsibilities; reduced coupling |
 | Mar 19 | `Added try catch blocks` → `added OverdraftLimitExceededException` → `Merge PR #1` | Full exception hierarchy (7 custom exceptions), input validation, Javadoc, test suite — merged via PR #1 |
 
----
 
-## 🧪 Test Results
+## Test Results
 
 > [!NOTE]
 > **17 tests** across `AccountTest` and `AccountServiceTest` — all passing.
@@ -55,7 +53,7 @@ Coverage focused on:
 
 ---
 
-## 🖥️ Demo Summary
+## Demo Summary
 
 By the end of Sprint 1, a bank teller could:
 
