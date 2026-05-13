@@ -1,4 +1,4 @@
-# 🗂️ Sprint 0 — Planning
+# Sprint 0 — Planning
 
 ![Status](https://img.shields.io/badge/Status-Complete-22c55e?style=flat-square)
 ![Stories](https://img.shields.io/badge/Stories-9-3b82f6?style=flat-square)
@@ -11,24 +11,22 @@
 | **Role** | Apprentice Software Developer |
 | **Organisation** | Amalitech Apprenticeship Programme |
 
----
 
-## 🎯 Product Vision
+## Product Vision
 
 > **BankVault** is a console-based banking platform that enables bank tellers to manage customers, accounts, and financial transactions in real time — built to demonstrate clean object-oriented architecture, robust error handling, and iterative delivery using Agile and DevOps practices.
 
 The system is intentionally scoped as a CLI prototype: the goal is correctness of domain logic, observability of delivery cadence, and rigour in testing — not UI sophistication.
 
----
 
-## 📌 Foundation Note
+## Foundation Note
 
 > [!NOTE]
 > This project builds on a base scaffold provided through the Amalitech apprenticeship programme (`AT-Apprenticeship/bank-management-system`). The scaffold established the initial project skeleton and early class structure. All feature development, refactoring, testing, persistence, concurrency, CI integration, and monitoring described in Sprints 1 and 2 were individually authored as iterative delivery on top of that foundation — reflecting how professional developers operate: inheriting a codebase and delivering incrementally within it.
 
 ---
 
-## 📋 Product Backlog
+## Product Backlog
 
 | ID | User Story | Priority | Points | Sprint |
 |---|---|:---:|:---:|:---:|
@@ -44,9 +42,8 @@ The system is intentionally scoped as a CLI prototype: the goal is correctness o
 
 > **Total estimated effort:** 26 story points &nbsp;|&nbsp; Sprint 1: 11 pts &nbsp;|&nbsp; Sprint 2: 15 pts
 
----
 
-## 🔍 Acceptance Criteria
+## Acceptance Criteria
 
 <details>
 <summary><strong>US-01 — Customer Registration</strong></summary>
@@ -136,9 +133,8 @@ The system is intentionally scoped as a CLI prototype: the goal is correctness o
 
 </details>
 
----
 
-## ✅ Definition of Done
+## Definition of Done
 
 A backlog item is considered **Done** when **all** of the following are true:
 
@@ -150,9 +146,8 @@ A backlog item is considered **Done** when **all** of the following are true:
 - [x] No unused imports or dead code are present
 - [x] The feature is reachable from the console menu (if user-facing)
 
----
 
-## 🗓️ Sprint Plans
+## Sprint Plans
 
 ### Sprint 1 &nbsp;—&nbsp; Mar 11–19
 
@@ -169,7 +164,6 @@ A backlog item is considered **Done** when **all** of the following are true:
 
 **Key technical tasks:** Build domain model · implement exception hierarchy · wire input validation · write AccountTest and AccountServiceTest
 
----
 
 ### Sprint 2 &nbsp;—&nbsp; Mar 25–Apr 2
 
@@ -187,6 +181,5 @@ A backlog item is considered **Done** when **all** of the following are true:
 
 **Key technical tasks:** Migrate arrays to collections · implement NIO file I/O · add regex validation · make TransactionManager thread-safe · set up GitHub Actions · add `java.util.logging`
 
----
 
 ![Sprint Lifecycle](../../assets/diagrams/sprint-lifecycle.svg)
