@@ -1,11 +1,10 @@
-# 🔁 Sprint 1 — Retrospective
+# Sprint 1 — Retrospective
 
 ![Sprint](https://img.shields.io/badge/Sprint-1-22c55e?style=flat-square)
 ![Date](https://img.shields.io/badge/Date-Mar_11–19_2026-6b7280?style=flat-square)
 
----
 
-## ✅ What Went Well
+## What Went Well
 
 ### 1. Consistent, incremental delivery
 The commit history reflects genuine day-by-day progress — no large end-of-sprint dumps. Each commit added a discrete, named capability: customer classes, exception classes, the bank layer, the main class. This cadence made it straightforward to identify exactly when each feature was introduced and to isolate regressions.
@@ -15,7 +14,7 @@ Defining a custom exception hierarchy (`InsufficientFundsException`, `OverdraftL
 
 ---
 
-## ⚠️ What to Improve
+## What to Improve
 
 ### 1. Early commits mixed too many concerns
 Several commits in the first two days bundled domain classes, service logic, and controller code into a single change. The `added remaining account classes and java classes from the target folder` commit, for example, introduced multiple classes at once.
@@ -29,9 +28,8 @@ The `Refactored banking architecture for Single Source of Truth` commit (Mar 12)
 > [!TIP]
 > In Sprint 2, the data model will be agreed upfront before any feature code is written.
 
----
 
-## 🎯 Action Items for Sprint 2
+## Action Items for Sprint 2
 
 | # | Action | Why |
 |:---:|---|---|
