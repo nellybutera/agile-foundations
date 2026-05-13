@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.bank_management_system.utils.FunctionalUtils;
+import java.util.logging.Logger;
 
 /**
  * In-memory ledger that stores and queries all transactions across the system.
@@ -17,6 +18,8 @@ import com.bank_management_system.utils.FunctionalUtils;
  * no two threads can interleave a read-then-write on the list simultaneously.
  */
 public class TransactionManager {
+
+    private static final Logger LOG = Logger.getLogger(TransactionManager.class.getName());
 
     private final List<Transaction> transactions = Collections.synchronizedList(new ArrayList<>());
 
@@ -28,6 +31,8 @@ public class TransactionManager {
      */
     public synchronized void addTransaction(Transaction transaction) {
         transactions.add(transaction);
+        LOG.fine(String.format("Ledger entry: account=%s type=%s amount=%.2f",
+                transaction.getAccountNumber(), transaction.getType(), transaction.getAmount()));
     }
 
     /** Returns an unmodifiable snapshot of all recorded transactions. */

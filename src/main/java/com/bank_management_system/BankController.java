@@ -12,12 +12,15 @@ import com.bank_management_system.utils.ConcurrencyUtils;
 import com.bank_management_system.utils.ValidationUtils;
 
 import java.io.File;
+import java.util.logging.Logger;
 
 /**
  * UI Controller for the Bank Management System.
  * Drives the main menu loop and delegates all business logic to the service layer.
  */
 public class BankController {
+
+    private static final Logger LOG = Logger.getLogger(BankController.class.getName());
 
     private final AccountService accountService;
     private final CustomerService customerService;
@@ -37,6 +40,7 @@ public class BankController {
      * Runs until the user chooses to exit.
      */
     public void start() {
+        LOG.info("BankVault application started");
         printWelcome();
 
         boolean running = true;
@@ -57,6 +61,7 @@ public class BankController {
 
         persistenceService.saveAccounts(accountService.getAllAccounts());
         persistenceService.saveTransactions(accountService.getAllTransactions());
+        LOG.info("BankVault shutdown — data auto-saved to disk");
         System.out.println("\nThank you for using Bank Account Management System!");
         System.out.println("Data automatically saved to disk.");
         System.out.println("Goodbye!");
@@ -120,6 +125,7 @@ public class BankController {
         System.out.println("____________________");
         persistenceService.saveAccounts(accountService.getAllAccounts());
         persistenceService.saveTransactions(accountService.getAllTransactions());
+        LOG.info("Manual data save completed");
         System.out.println("\u2713 File save completed successfully.");
         inputReader.pressEnterToContinue();
     }
@@ -184,6 +190,7 @@ public class BankController {
             }
 
             accountService.processTransaction(accNum, amount, txnType);
+            LOG.info(String.format("Transaction completed: account=%s type=%s amount=%.2f", accNum, txnType, amount));
             System.out.println("\nTransaction completed successfully!");
 
         } catch (Exception e) {
@@ -226,6 +233,7 @@ public class BankController {
             }
 
             accountService.transfer(fromAccNum, toAccNum, amount);
+            LOG.info(String.format("Transfer completed: from=%s to=%s amount=%.2f", fromAccNum, toAccNum, amount));
             System.out.println("\nTransfer completed successfully!");
 
         } catch (Exception e) {
@@ -296,6 +304,8 @@ public class BankController {
             if (customer == null) return;
 
             Account account = openAccount(customer);
+            LOG.info(String.format("Account created: number=%s customer=%s type=%s",
+                    account.getAccountNumber(), customer.getName(), account.getAccountType()));
             printAccountCreatedConfirmation(customer, account);
 
         } catch (Exception e) {
