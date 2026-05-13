@@ -1,4 +1,4 @@
-# 🟠 Sprint 2 — Review
+# Sprint 2 — Review
 
 ![Status](https://img.shields.io/badge/Status-Complete-22c55e?style=flat-square)
 ![Stories](https://img.shields.io/badge/Stories_Delivered-5%2F5-22c55e?style=flat-square)
@@ -11,16 +11,14 @@
 | **Sprint dates** | Mar 25 – Apr 2, 2026 |
 | **Sprint goal** | Persistence, transfers, CI pipeline, logging — with Sprint 1 process improvements applied |
 
----
 
-## 🎯 Sprint Goal Result
+## Sprint Goal Result
 
 > [!NOTE]
 > All five planned stories delivered and met the Definition of Done. The application now persists data across restarts, the CI pipeline runs on every push, and all 32 tests pass with a green build on `main`.
 
----
 
-## 📦 Delivered Stories
+## Delivered Stories
 
 | Story | Description | Status |
 |:---:|---|:---:|
@@ -30,9 +28,8 @@
 | `US-08` | GitHub Actions CI — `mvn test` on push and PR, Surefire report upload | ✅ Done |
 | `US-09` | Structured logging — `java.util.logging.Logger` in `BankController` and `TransactionManager` | ✅ Done |
 
----
 
-## 🔑 Key Commits
+## Key Commits
 
 | Date | Commit | What it delivered |
 |---|---|---|
@@ -44,9 +41,7 @@
 | Apr 1 | `docs: add Javadocs` (6 commits) | Full Javadoc coverage across all packages |
 | Apr 2 | `Merge pull request #3` | All Sprint 2 work merged to `main` via code-reviewed PR |
 
----
-
-## 🧪 Test Results
+## Test Results
 
 | File | Tests | Coverage Focus |
 |---|:---:|---|
@@ -56,9 +51,8 @@
 | `ExceptionTest` | 12 | Exception hierarchy, input validator edge cases, closed-account guards |
 | **Total** | **32** | All passing — CI confirmed green on final push to `main` |
 
----
 
-## 📡 Monitoring Evidence
+## Monitoring Evidence
 
 Structured logging added via `java.util.logging.Logger`:
 
@@ -77,9 +71,8 @@ INFO: Transfer completed: from=ACC001 to=ACC002 amount=300.00
 INFO: BankVault shutdown — data auto-saved to disk
 ```
 
----
 
-## 🖥️ Demo Summary
+## Demo Summary
 
 By the end of Sprint 2, a bank teller could:
 
@@ -90,6 +83,5 @@ By the end of Sprint 2, a bank teller could:
 5. Run a **concurrent transaction simulation** demonstrating thread-safe balance updates
 6. Exit knowing all data was **auto-saved** — no manual step required
 
----
 
 ![CI/CD Pipeline](../../assets/diagrams/cicd-pipeline.svg)
